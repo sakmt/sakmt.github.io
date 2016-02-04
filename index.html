@@ -15,13 +15,15 @@
         }
         h1 {
             margin: 0;
-            font-size: 48px;
+            font-size: 36px;
             font-weight: 100;
         }
         a { text-decoration: none; }
         a:hover { text-decoration: none; }
         img {
             margin: 0 11px 0 0;
+            width: 32px;
+            height: 32px;
         }
         p {
             text-align: left;
@@ -30,9 +32,53 @@
             font-weight: 300;
         }
         .content {
-            margin: 192px auto;
-            padding: 12px;
+            position: relative;
+            margin: 144px auto 0;
+            border: 1px solid #fff;
+            border-top: none;
+            border-bottom: none;
+            border-radius: 1000px;
+            padding: 88px 72px 56px;
+            width: 144px;
+            height: 144px;
+            animation: color 5s linear infinite;
+        }
+        .content:before {
+            display: block;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            border: 1px solid #fff;
+            border-top: none;
+            border-bottom: none;
+            border-radius: 1000px;
+            padding: 48px;
             width: 192px;
+            height: 192px;
+            content: " ";
+            pointer-events: none;
+            -webkit-animation: spin 7s ease-in-out infinite, color 9s linear infinite;
+            -moz-animation: spin 7s ease-in-out infinite, color 9s linear infinite;
+            -ms-animation: spin 7s ease-in-out infinite, color 9s linear infinite;
+            -o-animation: spin 7s ease-in-out infinite, color 9s linear infinite;
+            animation: spin 7s ease-in-out infinite, color 9s linear infinite;
+        }
+        @keyframes spin {
+            0% {transform: rotate(0deg);}
+            100% {transform: rotate(360deg);}
+        }
+        @keyframes color {
+            0% {border-color: hsl(0, 80%, 80%);}
+            10% {border-color: hsl(36, 80%, 80%);}
+            20% {border-color: hsl(72, 80%, 80%);}
+            30% {border-color: hsl(108, 80%, 80%);}
+            40% {border-color: hsl(144, 80%, 80%);}
+            50% {border-color: hsl(180, 80%, 80%);}
+            60% {border-color: hsl(216, 80%, 80%);}
+            70% {border-color: hsl(252, 80%, 80%);}
+            80% {border-color: hsl(288, 80%, 80%);}
+            90% {border-color: hsl(324, 80%, 80%);}
+            100% {border-color: hsl(360, 80%, 80%);}
         }
     </style>
 </head>
@@ -42,13 +88,13 @@
     <h1>sakmt.net</h1>
     <p>// under construction</p>
     <a href="https://www.facebook.com/kirimotch">
-        <img src="img/facebook.png" alt="facebook" width="48" height="48" />
+        <img src="img/facebook.png" alt="facebook" />
     </a>
     <a href="https://twitter.com/sakmtech">
-        <img src="img/twitter.png" alt="twitter" width="48" height="48" />
+        <img src="img/twitter.png" alt="twitter" />
     </a>
     <a href="https://github.com/sakmt">
-        <img src="img/github.png" alt="github" width="48" height="48" />
+        <img src="img/github.png" alt="github" />
     </a>
 </div>
 
